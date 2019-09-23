@@ -1,0 +1,20 @@
+def higher_card(bet):
+  #To check for zero bet
+  if bet<=0:
+    print("You need to enter a bet!")
+  #The game starts  
+  print("Now lets play the card")
+  print("A "+str(bet)+" dollars is up for grabs!!! GOODLUCK")
+  card1=random.randint(1,10)
+  card2=random.randint(1,10)
+  print("Player 1 played "+str(card1))
+  print("Player 2 played "+str(card2))
+  #Lets check who won or lose
+  if(card1>card2):
+    print("Player 1 won "+str(bet)+" dollars! Player 2 lost")
+    return bet
+  elif(card2>card1):
+    print("Player 2 won "+str(bet)+" dollars! Player 1 lost")
+    return bet
+  else:
+    print("It is a tie!!!")
