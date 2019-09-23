@@ -1,0 +1,52 @@
+import random
+
+#Write your game of chance functions here
+def flip_a_coin(num_flip,money):
+  head=0
+  tail=0
+  num_of_tries=0
+  while num_of_tries<num_flip:
+    coin=random.randint(1,2)
+    num_of_tries+=1
+    if coin==1:
+      head+=1
+      print("Head")
+      money+=50
+    if coin==2:
+      tail+=1
+      print("Tail")
+      money-=50
+  total_num_of_tries=num_of_tries
+  total_heads=head
+  total_tails=tail
+  total_money=money
+  print("You flipped the coin "+str(total_num_of_tries)+" times")
+  print("You had "+str(total_heads)+" heads")
+  print("You had "+str(total_tails)+" tails")
+  print("Your total money won is----"+str(total_money))
+  
+
+#Call your game of chance functions here
+'''
+The coin will flip 10 times. You gain 50 naira for each head and 	       lose 50 naira for each tail.
+Ready to play!!!
+'''
+flip_a_coin(5,700)
+
+def rolldice(guess,amount):
+  play_game='y'
+  while play_game=='Y' or 'y':
+    guess=input("Enter your guess: Odd or Even :")
+    roll1=random.randint(1,6)
+    roll2=random.randint(1,6)
+    ans=roll1+roll2
+    if ans%2==0 and guess=='Even':
+      print("You won! Congrats")
+    if ans%2!=0 and guess=='Odd':
+      print("You won! Congrats")
+    else:
+      print("You Lose")
+    play_game=input("Do you want to play again Y or y")
+    
+    
+rolldice('y',100)
