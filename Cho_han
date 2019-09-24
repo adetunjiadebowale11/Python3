@@ -1,0 +1,23 @@
+def cho_han(predict, bet):
+    #Bet must be above  0
+    if bet <= 0:
+        print("*******************")
+        print("Your bet should be above 0.")
+        print("*******************")
+        return 0
+
+   
+    print("Cho-Han! Game begins")
+    dice1 = random.randint(1, 6)
+    dice2 = random.randint(1, 6)
+    total = dice1 + dice2
+    print("The sum of the two dice is " + str(total))
+
+    if predict == "Even" and total % 2 == 0:
+        print("You won " + str(bet)+" dollars!")
+        
+    elif predict == "Odd" and total % 2 == 1:
+        print("You won " + str(bet)+" dollars!")
+        
+    else:
+        print("You lost " + str(bet)+" dollars!")
