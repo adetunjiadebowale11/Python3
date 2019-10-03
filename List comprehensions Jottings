@@ -1,0 +1,37 @@
+#List comprehensions
+words = ["@coolguy35", "#nofilter", "@kewldawg54", "reply", "timestamp", "@matchamom", "follow", "#updog"]
+usernames = []
+
+for word in words:
+  if word[0] == '@':
+    usernames.append(word)
+    
+    
+    
+    
+>>> print(usernames)
+["@coolguy35", "@kewldawg54", "@matchamom"]
+
+#Short form of above
+usernames = [word for word in words if word[0] == '@']
+
+#List comprehension
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+can_ride_coaster=[]
+
+for hgt in heights:
+  if hgt>161:
+    can_ride_coaster.append(hgt)
+    
+print(can_ride_coaster)
+
+#While loop
+
+all_students = ["Alex", "Briana", "Cheri", "Daniele", "Dora", "Minerva", "Alexa", "Obie", "Arius", "Loki"]
+students_in_poetry = []
+
+while len(students_in_poetry) < 6:
+  student = all_students.pop()
+  students_in_poetry.append(student)
+  
+print(students_in_poetry)
