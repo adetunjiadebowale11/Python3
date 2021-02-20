@@ -35,3 +35,17 @@ while len(students_in_poetry) < 6:
   students_in_poetry.append(student)
   
 print(students_in_poetry)
+
+#Review Practice
+single_digits=range(0,10)
+squares=[]
+for digits in single_digits:
+  print(digits)
+  square=digits*digits
+  squares.append(square)
+  
+print(squares)
+
+cubes=[(digits)**3 for digits in single_digits]
+
+print(cubes)
